@@ -37,7 +37,7 @@ const ThreeJSComponent = () => {
             const ambient = new THREE.HemisphereLight(0xffffff, 0x8d8d8d, 0.15);
             scene.add(ambient);
 
-            const loader = new THREE.TextureLoader().setPath('../src/textures/');
+            const loader = new THREE.TextureLoader().setPath('/textures/');
             const filenames = ['disturb.jpg', 'colors.png', 'uv_grid_opengl.jpg'];
             const textures = { none: null };
 
@@ -73,7 +73,7 @@ const ThreeJSComponent = () => {
             mesh.receiveShadow = true;
             scene.add(mesh);
 
-            new PLYLoader().load('../src/models/Lucy100k.ply', (geometry) => {
+            new PLYLoader().load('/models/Lucy100k.ply', (geometry) => {
                 geometry.scale(0.0024, 0.0024, 0.0024);
                 geometry.computeVertexNormals();
 
