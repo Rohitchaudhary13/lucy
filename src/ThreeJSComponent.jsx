@@ -29,7 +29,8 @@ const ThreeJSComponent = () => {
 
             const controls = new OrbitControls(camera, renderer.domElement);
             controls.minDistance = 2;
-            controls.maxDistance = 10;
+            controls.maxDistance = 7;
+            controls.enablePan = false;
             controls.maxPolarAngle = Math.PI / 2;
             controls.target.set(0, 1, 0);
             controls.update();
